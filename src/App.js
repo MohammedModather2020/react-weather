@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { openWeatherApiConfig } from './api/ApiConfig';
 import CurrentWeather from './components/current-weather/CurrentWeather';
+import ForecastWeather from './components/forecast-weather/ForecastWeather';
 import Search from './components/search/Search';
 
 function App() {
-  const [currentWeather, setCurrentWeather] = useState({});
-  const [forecastWeather, SetForecastWeather] = useState({});
+  const [currentWeather, setCurrentWeather] = useState();
+  const [forecastWeather, SetForecastWeather] = useState();
   // ------------------------------------------------------------------->
   // call api for get weather for pass city
   const onSearchCityChange = (search) => {
@@ -27,6 +28,7 @@ function App() {
     <div className='container'>
       <Search onSearchCityChange={onSearchCityChange} />
       {currentWeather && <CurrentWeather currentWeather={currentWeather} />}
+      {forecastWeather && <ForecastWeather forecastWeather={forecastWeather} />}
     </div>
   );
 }
