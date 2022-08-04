@@ -14,14 +14,14 @@ export default function ForecastWeather({ forecastWeather }) {
   ); // ------------------------------------------------------------------->
   return (
     <div className='forecast-weather'>
-      <h2 className='title'>Daily</h2>
       <Accordion allowZeroExpanded>
         {forecastWeather?.list?.slice(0, 7).map((item, index) => (
           <AccordionItem key={index}>
             <AccordionItemHeading>
               <AccordionItemButton>
                 <div className='daily-item'>
-                  <img
+                  <div className="start">
+                    <img
                     className='icon-small'
                     src={`assets/images/icons/${
                       (item?.weather ?? [])[0]?.icon
@@ -29,12 +29,13 @@ export default function ForecastWeather({ forecastWeather }) {
                     alt='weather'
                   />
                   <h3 className='day'>{forecastDays[index]}</h3>
+                  </div>
                   <p className='description'>
-                    {item?.weather[0]?.description}
+                    {item?.weather[0]?.description} {' '}
                     <span className='min'>
                       {Math.round(item?.main?.temp_min)}°C
                     </span>{' '}
-                    /
+                    / {' '}
                     <span className='max'>
                       {Math.round(item?.main?.temp_max)}°C
                     </span>

@@ -1,0 +1,11 @@
+@media screen and (max-width:767px) {
+  .wrapper-app{
+    width: 95%;
+  }
+  .current-weather{
+    display: block;
+  }
+  .current-weather .temperature{
+    border-right: unset;
+  }
+}

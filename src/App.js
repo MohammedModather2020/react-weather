@@ -25,10 +25,14 @@ function App() {
       .catch((err) => {});
   };
   return (
-    <div className='container'>
-      <Search onSearchCityChange={onSearchCityChange} />
-      {currentWeather && <CurrentWeather currentWeather={currentWeather} />}
-      {forecastWeather && <ForecastWeather forecastWeather={forecastWeather} />}
+    <div className='wrapper-app'>
+      <div className='container'>
+        <Search onSearchCityChange={onSearchCityChange} />
+        {currentWeather && <CurrentWeather currentWeather={currentWeather} />}
+        {forecastWeather && (
+          <ForecastWeather forecastWeather={forecastWeather} />
+        )}
+      </div>
     </div>
   );
 }
