@@ -14,7 +14,8 @@
    1.1- Root Element
    1.2- Body Element
 * 2- Section Style
-   2.0- 
+   2.0- Search
+   2.1- Current Weather
 * 3- Common Style
    3.0- 
 /* 
@@ -35,4 +36,4 @@ body{
   font-family: var(--font-family);
 }
 /** 2- Section Style */
-/**  2.0- Navbar */
+/**  2.0- Search */
