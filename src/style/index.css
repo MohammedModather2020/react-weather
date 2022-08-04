@@ -1,0 +1,163 @@
+/* 
+* Template Name             : Weather App
+* Start Date                : 3-8-2022
+* End Date                  : 4-8-2022
+* Last Update               : 4-8-2022
+* Version                   : 1.0.0
+* URL                       : https://mohammedmodather2021.github.io/react-weather
+* GitHub URL                : https://github.com/MohammedModather2021/react-weather.git
+* Contact US                : mohammedmodather144@gmail.com
+*/
+/* 
+* 1- General Style
+   1.0- Universal Selector
+   1.1- Root Element
+   1.2- Body Element
+* 2- Section Style
+   2.0- Search
+   2.1- Current Weather
+   2.2- Forecast Weather
+* 3- Common Style
+   3.0- Wrapper App
+/* 
+/** 1- Genral Style */
+/**  1.0- Universal Selector */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/** 1.1- Root Element */
+:root{
+  --font-family: 'Dosis', sans-serif;
+  scroll-behavior: smooth;
+}
+/** 1.2- Body Element */
+body{
+  background-color: #F5F5F5;
+  font-family: var(--font-family);
+}
+/** 2- Section Style */
+/**  2.0- Search */
+.css-1s2u09g-control{
+  padding: .3rem !important;
+  border-radius: 1rem !important;
+  -webkit-border-radius: 1rem !important;
+  -moz-border-radius: 1rem !important;
+  -ms-border-radius: 1rem !important;
+  -o-border-radius: 1rem !important;
+}
+.css-14el2xx-placeholder{
+  font-size: .8rem;
+  color: #ddd;
+  letter-spacing: 1.5px;
+}
+/** 2.1- Current Weather */
+.current-weather{
+  background-color: #003865;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  color: #FFF;
+  gap: 2rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+}
+.current-weather .temperature{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 2px dashed #FFF;
+}
+.current-weather .temperature .city{
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+.current-weather .temperature .weather{
+  font-size: .9rem;
+  font-weight: 400;
+  margin-top: 0;
+  text-transform: capitalize;
+}
+.current-weather .temperature .degree{
+  font-size: 2.3rem;
+  font-weight: bolder;
+}
+.current-weather .temperature .icon img{
+  width: 100%;
+}
+.current-weather .details{
+  margin-top: 0;
+}
+.current-weather .details .parameters .parameter{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .2rem;
+}
+/** 2.2- Forecast Weather */
+.forecast-weather{
+  margin-top: 1rem;
+}
+.forecast-weather .daily-item{
+  display: flex;
+  background-color: #EF5B0C;
+  margin-bottom: .5rem;
+  color: #FFF;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  padding-inline: .5rem;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+}
+.forecast-weather .daily-item .start .icon-small{
+  width: 40px;
+}
+.forecast-weather .daily-item .start .day{
+  font-size: 1rem;
+}
+.forecast-weather .daily-item .description span{
+  font-weight: bold;
+}
+.forecast-weather .daily-details{
+  border-radius: 0.5rem;
+  background: #F5f5f5;
+  padding: 1rem;
+  column-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.forecast-weather .daily-details .item{
+  display: flex;
+  margin-bottom: .5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.forecast-weather .daily-details .item .title{
+  font-weight: bold;
+  font-size: 1rem;
+}
+.forecast-weather .daily-details .item .desc{
+  font-size: .9rem;
+}
+/** 3- Common Style */
+/**  3.0- Wrapper App */
+.wrapper-app{
+  background-color: #FFF;
+  width: 45%;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+}

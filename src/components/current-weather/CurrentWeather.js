@@ -5,8 +5,9 @@ export default function CurrentWeather({ currentWeather }) {
         <div className='text'>
           <p className='city'>{currentWeather?.city}</p>
           <p className='weather'>
-            {(currentWeather?.weather ?? [])[0]?.description}
+            {(currentWeather?.weather ?? [])[0]?.description} 
           </p>
+        <p className='degree'>{Math.round(currentWeather?.main?.temp)} °C</p>
         </div>
         <div className='icon'>
           <img
@@ -18,11 +19,7 @@ export default function CurrentWeather({ currentWeather }) {
         </div>
       </div>
       <div className='details'>
-        <p className='degree'></p>
         <div className='parameters'>
-          <div className='parameter'>
-            <span className='label title'>Details</span>
-          </div>
           <div className='parameter'>
             <span className='label'>Feels Like</span>
             <span className='value'>
